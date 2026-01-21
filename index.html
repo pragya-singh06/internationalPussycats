@@ -1,12 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <!--Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Sixtyfour&display=swap"
+      rel="stylesheet"
+    />
+
     <title>International Pussycats</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="wrapper">
+      <header>
+        <h1>International Pussycats is a virtual post-punk band</h1>
+        <!--  <a href="#" tabindex="0" class="join-now">JOIN NOW</a>-->
+        <div class="signUp">
+          <div class="form-wrapper">
+            <!--  <div class="form-content">-->
+            <form id="joinNow" class="form-content" action="#" method="POST">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstname" required />
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastname" required />
+              <label for="city">Location:</label>
+              <input type="text" id="city" name="city" required />
+              <label for="instrument">Instrument:</label>
+              <input type="text" id="instrument" name="instrument" required />
+              <button type="submit">Join Now Pussycat</button>
+            </form>
+          </div>
+          <!--</div>-->
+        </div>
+        <h2>
+          We redefine punk not as a Do-It-Yourself effort but as a speculation
+          on what happens if you Don’t-Do-It-At-All. Let’s make the world’s
+          largest punk band that never, not even once, performed. Anyone can
+          join. Your mom can join. Your infant can join. You can join if you’re
+          already in a band, if you play an instrument, or if you want to join a
+          band but don’t know how to play. If you want to tell people you’re in
+          a band but don’t want to practice, you can be part of the
+          International Pussycats. If you don’t care about making money, you
+          should definitely join this band.
+        </h2>
+        <h3>
+          International Pussycats was made by xtine burrough, aka Vocal Purr,
+          inspired by burrough and Mundy’s
+          <a href="#">Critical Web Design</a>
+        </h3>
+      </header>
+
+      <div class="content-members" role="main">
+        <a
+          href="index.html"
+          title="you don't have to go home but you can't stay here"
+        >
+<!--    OLD      <img
+            src="https://cdn.glitch.global/0a05193e-5450-4c22-b4af-ad0f7a53cd59/internationalPussycats-final.png?v=1714346872059"
+            alt="International Pussycats Tshirt"
+            title="you don't have to go home but you can't stay here"
+          />-->
+           <img
+            src="tshirt-top.png"
+            alt="International Pussycats Tshirt"
+            title="you don't have to go home but you can't stay here"
+          />
+        </a>
+        <div id="membersList">
+          <h2>BAND MEMBERS</h2>
+          <!--
+          Aimee <span class="nickname">Meow Meow Strings</span> Mann
+          <span class="membersFrom"><br />from Los Angeles on vocals</span>
+          <br />Liz <span class="nickname">Licks Bass</span> Phair
+          <span class="membersFrom"><br />from Chicago on guitar </span>
+          <br />Helene de <span class="nickname">Furry Chords</span> Cixous
+          <span class="membersFrom"
+            ><br />from Paris, France on harmonies
+          </span>
+          <br />Judith <span class="nickname">Claws ThreeChords</span> Butler
+          <span class="membersFrom"
+            ><br />from Berkeley, California on kazoo
+          </span>
+          <br />Exene <span class="nickname">Feline Sticks</span> Cervenka
+          <span class="membersFrom"><br />from Los Angeles on spoons </span>
+          <br />Kathleen <span class="nickname">Loud Tails</span> Hanna
+          <span class="membersFrom"
+            ><br />from Olympia, Washington on theramin
+          </span>
+          <br />Billy <span class="nickname">Angry Whiskers</span> Karren
+          <span class="membersFrom"
+            ><br />from the Pacific Northwest on flute
+          </span>
+          <br />Kathi <span class="nickname">Hissing Vocals</span> Wilcox
+          <span class="membersFrom"
+            ><br />from somewhere out west on trumpet
+          </span>
+          <br />Tobi <span class="nickname">Glass-eyed Strums</span> Vail
+          <span class="membersFrom"><br />from Oregon on clarinet </span>
+          <br />Corinne <span class="nickname">Prrrly Chords</span> Tucker
+          <span class="membersFrom"
+            ><br />from Sleater-Kinney, it's the name of an exit near Olympia,
+            for realz on vocals</span
+          >
+          <br />Carrie <span class="nickname">Heavy Nip</span> Brownstein
+          <span class="membersFrom"><br />from Sleater-Kinney on vocals</span>
+          <br />Janet <span class="nickname">Feet-first Kickpads</span> Weiss
+          <span class="membersFrom"
+            ><br />from the basement on a hill on drums</span
+          >
+-->
+        </div>
+      </div>
+    </div>
+    <script>
+      // The URL where your backend server is listening
+      const API_URL = "http://localhost:3000/api/members";
+
+      const punkNicknames = ["Furry Chords", "Hissing Feedback", "Claws Out", "Static Fur", "Reverb Meow", "The Scratcher", "Litterbox Lo-Fi",
+       "Fuzz Pedal", "Laser Pointer", "Naptime Shredder", "Hairball Distortion", "Stray Cat", "Nine Lives", "Tuna Can", "Alley Cat", 
+       "No-Wave Whiskers", "Angry Purr", "Feline Treble", "Bass Instinct", "Catnip Overdose", "Whisker Riot", "Dumpster Serenade", 
+       "Snarl Purr", "Back Alley Static", "Scratched Vinyl", "Midnight Hairball", "Rabid Tabby", "Broken Litter Amp", "Feral Feedback", 
+       "Claw Marks Only", "Streetlight Howl", "Neon Alley Paws", "Purrjury", "Spit & Whiskers", "Alley Echo", 
+       "Flea Collar Noise", "Stray Voltage", "Scuffed Paws", "Nine-Volt Cat", "Meowtallica", "Scratch 'n' Sniff","Feedback Loop",
+        "Broken Metronome", "Overdriven Paw", "Mono Mix Menace", "Out-of-Tune Claws", "Buzzing Strings", "Drop-D Paw", "Off-Beat Feline", 
+        "Muted Growl", "Feral Frequencies", "Clip Distortion", "Unplugged Menace", "Low-Gain Gremlin", "Dead String Theory", 
+        "Phase Shift Kitty", "DIY Delay", "Noise Floor Nap", "Tempo Tantrum", "Analog Alleycat", "Rehearsal Avoider", "Tape Hiss", 
+        "No-Wave Nap", "Broken Cassette", "Garage Static", "Unmastered Menace", "Found Sound Feral", "Side-B Only", "Demo Version Cat", 
+        "Unreleased Track", "Post-Practice Purr", "Minimal Effort Max Noise", "Anti-Hook", "Refused Encore", "Field Recording Feline", 
+        "Concept Album Cat"
+];
+function getRandomNickname() {
+    const randomIndex = Math.floor(Math.random() * punkNicknames.length);
+    return punkNicknames[randomIndex];
+  }
+      async function loadMembers() {
+    try {
+      const response = await fetch(API_URL);
+      const members = await response.json();
+      
+      const listContainer = document.getElementById("membersList");
+      // Reset the header content
+      listContainer.innerHTML = '<h2>BAND MEMBERS</h2><p id="printMembers"></p>'; 
+
+      members.forEach(member => {
+        const memberElement = document.createElement("p");
+        
+        // Use the saved nickname, or a fallback if an old member doesn't have one
+        const nickToDisplay = member.nickname || "Mystery Cat";
+
+        // We insert the <span class="nickname"> here to match your styling
+        memberElement.innerHTML = `
+          ${member.firstname} <span class="nickname">"${nickToDisplay}"</span> ${member.lastname}
+          <span class="membersFrom"><br />from ${member.city} on ${member.instrument}</span>
+        `;
+        listContainer.appendChild(memberElement);
+      });
+    } catch (error) {
+      console.error("Error loading members:", error);
+    }
+  }
+      // 2. Function to Handle the Form Submit (Joining the Band)
+      document.querySelector("form.form-content").addEventListener("submit", async function (event) {
+        event.preventDefault(); // Stop the page from refreshing
+      
+        const generatedNick = getRandomNickname();
+
+        // Gather the data from your text boxes
+        const formData = {
+          firstname: document.getElementById("firstName").value,
+          lastname: document.getElementById("lastName").value,
+          city: document.getElementById("city").value,
+          instrument: document.getElementById("instrument").value,
+          nickname: generatedNick 
+        };
+
+        // Send the data to your Node.js Server
+        try {
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+          });
+          const result = await response.json();
+
+          if (response.ok) {
+            document.querySelector("form.form-content").reset();
+            loadMembers(); 
+            alert("Welcome to the band!");
+          } else {
+              alert(result.error || "Something went wrong joining the band.");          }
+        } catch (error) {
+          console.error("Error submitting form:", error);
+        }
+      });
+
+      // 3. Load the members as soon as the page opens
+      loadMembers();
+    </script>
   </body>
 </html>
