@@ -1,7 +1,7 @@
 html,
 body {
-  margin: *;
-  padding: *;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
 }
@@ -119,22 +119,37 @@ button:hover {
   background-color: rgb(141, 67, 218, 0.9);
   color: #cccccc;
 }
-
+/*** T-SHIRT ***/
+img {
+  max-width: 100%; /* image scales down but not larger than its original width */
+  height: auto;    /* Maintains aspect ratio when scaling */
+  display: block;  /*removes space below img; helps keep layout intact when scaling */
+}
 /*** BAND MEMBERS  ***/
 .content-members {
   width: 100%;
+  max-width: 620px;
   text-align: center;
   margin: 0 auto;
+  position: relative;
+  
   font-size: 1.5rem;
-  /*background-color: pink; using this to see div boundaries */
+  /* background-color: pink; using this to see div boundaries */
 }
 #membersList {
-  width: 408px;
-  height: 100vh; /* this is where we see something interesting */
+  width: 100%;
+  box-sizing: border-box; 
+  width: fit-content;
+  margin: 0 auto;
+  /* width: 100%; */
+  min-height: 100vh; /* this is where we see something interesting */
   text-align: left;
   padding: 0 2rem 2rem 2rem;
-  margin: -2rem auto 2rem auto;
+  margin-top: -2rem;
   background: #000000;
+  /* background: url("tshirt-bottom.png");
+  background-repeat: repeat-y;
+  background-origin: content-box; */
   color: #cccccc;
   font-size: 1rem;
 }
@@ -146,14 +161,23 @@ button:hover {
 }
 
 #printMembers {
-   background-color: ##af74ed; /*lighter purple*/
+   background-color: #af74ed; /*lighter purple*/
     background-image: linear-gradient(25deg, #af74ed, #F3F3F4);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-  font-size: 2.5rem;
+   width: 100%;
+   padding: 0 auto;
+  font-size: 2vw; 
+}
+.nickname {
+  font-family: 'Sixtyfour', cursive; /* Matches the font linked in your head */
+  color: #af74ed; 
+  font-size: .75rem;
+  font-style: italic;
+  padding: 0 0.3rem; /* Adds a little breathing room around the nickname */
 }
 /********* stuff i didn't use  ****/
 /*.join {
